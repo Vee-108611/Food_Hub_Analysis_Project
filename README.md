@@ -1,37 +1,124 @@
-### Food_Hub_Analysis_Project
-This project explores customer order data from FoodHub, focusing on restaurant performance, cuisine trends, and delivery efficiency. The dataset includes variables such as order cost, cuisine type, day of the week, customer ratings, preparation time, and delivery time.
+# FoodHub Order Analysis
 
-### Business Insight
-  
-From looking at the delivery data, here are the main takeaways and suggestions to improve the business.
+## Project Overview
 
-### Key Findings
+This project analyzes order data from **FoodHub**, a food delivery aggregator service operating in New York. The analysis explores customer ordering patterns, restaurant performance, delivery efficiency, and revenue generation to provide actionable business insights.
 
-Popular Cuisines: American, Japanese, and Italian foods get the most orders. Restaurants like Shake Shack, The Meatball Shop, and Blue Ribbon Sushi are customer favorites.
+**Objective:** Analyze delivery order data to understand demand patterns across restaurants, identify operational inefficiencies, and provide data-driven recommendations to enhance customer experience and business growth.
 
-Weekday vs Weekend Performance: Weekends have more orders but faster deliveries (about 22 minutes) compared to weekdays (about 28 minutes). This suggests there may be delays or inefficiencies during the work week.
+---
 
-Lack of Customer Feedback: Many orders don’t have ratings, even from top restaurants. This makes it hard to know how satisfied customers really are.
+## Dataset
 
-High-Value Orders: About 29% of orders are over $20, where the company earns the most commission. These orders often come from cuisines like French, Thai, and Indian.
+**Source:** FoodHub internal order database  
+**Records:** 1,898 orders  
+**Time Period:** Restaurant delivery orders in New York  
 
-Long Wait Times: Around 10% of customers wait more than an hour for their food, which could lead to unhappy customers and fewer repeat orders.
+### Data Dictionary
 
-### Recommendations:
+| Column | Description |
+|--------|-------------|
+| `order_id` | Unique identifier for each order |
+| `customer_id` | ID of the customer who placed the order |
+| `restaurant_name` | Name of the restaurant |
+| `cuisine_type` | Type of cuisine (American, Japanese, Italian, etc.) |
+| `cost_of_the_order` | Total order cost in USD |
+| `day_of_the_week` | Weekday or Weekend |
+| `rating` | Customer rating out of 5 (or "Not given") |
+| `food_preparation_time` | Time (minutes) for restaurant to prepare food |
+| `delivery_time` | Time (minutes) for delivery person to deliver order |
+---
 
-* Improve Customer Feedback:
-Many customers don’t leave ratings. To fix this, the company can offer small rewards like credits or loyalty points when customers rate their orders. This will help the business understand customer satisfaction better.
+## Analysis & Key Questions Answered
 
-* Fix Weekday Delivery Delays:
-Deliveries are slower on weekdays, even though there are fewer orders. The company should look into this and improve efficiency. For example, they can add more drivers or offer incentives during weekdays to speed things up.
+The analysis addresses the following business questions:
 
-* Target Marketing Better:
-Weekend Promotions: Since American and Japanese food are popular on weekends, the company can run special weekend deals for these cuisines.
+1. **Order Distribution:** How many orders does each restaurant receive?
+2. **Cuisine Popularity:** What are the most popular cuisine types?
+3. **Order Value:** What percentage of orders cost more than $20?
+4. **Revenue Analysis:** What is the net revenue generated based on commission structure?
+5. **Customer Ratings:** What proportion of orders receive ratings?
+6. **Delivery Performance:** How do delivery times vary between weekdays and weekends?
+7. **Operational Efficiency:** What percentage of orders take more than 60 minutes total time?
+8. **Restaurant Performance:** Which restaurants receive the highest ratings?
 
-* Encourage Bigger Orders: Offer deals like “Spend $25, Get Free Delivery” to get customers to order more and increase revenue.
+---
 
-* Work with Slow Restaurants:
-Some delays happen because food takes too long to prepare. The company should work with restaurants that have long prep times to help them speed up their process, especially for delivery orders.
+## Key Findings
 
-* Reward Loyal Customers:
-Give discounts or special offers to frequent customers. For example, customers who order often can get rewards or be part of a “Gold Member” program to encourage them to keep ordering.
+### Customer Behavior
+- **Most Popular Cuisines:** American (28%), Japanese (15%), and Italian (13%)
+- **Top Restaurants:** Shake Shack, The Meatball Shop, and Blue Ribbon Sushi
+- **High-Value Orders:** 29% of orders exceed $20, generating higher commission
+
+### Operational Insights
+- **Missing Ratings:** 28.6% of orders lack customer ratings
+- **Delivery Times:** Weekend deliveries average 22 minutes vs. 28 minutes on weekdays
+- **Long Wait Times:** 10.5% of orders take more than 60 minutes (prep + delivery)
+
+### Revenue
+- **Total Net Revenue:** $6,166.30 across all orders
+- **Commission Structure:** 25% on orders >$20, 15% on orders >$5
+
+---
+
+## Business Recommendations
+
+### 1. Improve Feedback Collection
+- Implement incentives (loyalty points, discounts) for customers who leave ratings
+- Send automated rating reminders immediately after delivery
+- **Impact:** Better understanding of customer satisfaction and service quality
+
+### 2. Optimize Weekday Operations
+- Investigate root causes of slower weekday deliveries despite lower order volume
+- Add more delivery personnel during peak weekday hours
+- Implement route optimization algorithms
+- **Impact:** Reduce delivery times by 20%, improve customer satisfaction
+
+### 3. Targeted Marketing Campaigns
+- Weekend promotions for American and Japanese cuisine
+- Incentivize high-value orders with "Spend $25, Get Free Delivery" offers
+- Partner with top-performing restaurants for exclusive deals
+- **Impact:** Increase average order value and weekend revenue
+
+### 4. Restaurant Partnership Optimization
+- Work with slow-prep-time restaurants to streamline kitchen operations
+- Provide training or resources to improve food preparation efficiency
+- Consider removing consistently slow restaurants from the platform
+- **Impact:** Reduce total delivery time, fewer customer complaints
+
+### 5. Loyalty Program Development
+- Create tiered membership rewards for frequent customers
+- Offer exclusive perks to "Gold Members" (e.g., priority delivery)
+- **Impact:** Increase customer retention and lifetime value
+
+---
+
+### Analytical Techniques
+- **Descriptive Statistics:** Mean, median, percentages, distributions
+- **Grouping & Aggregation:** Restaurant performance, cuisine analysis, weekday/weekend comparison
+- **Custom Functions:** Revenue calculation based on commission tiers
+- **Data Visualization:** Bar charts, histograms, grouped comparisons
+
+---
+
+## 📧 Contact
+
+**Ivy Amexo**  
+Data Analyst | Aspiring Data Scientist  
+📧 amexoivy22@gmail.com
+🔗 https://www.linkedin.com/in/ivyamexo/ 
+💼 https://github.com/Vee-108611/Food_Hub_Analysis_Project
+
+---
+
+## License
+
+This project is for educational and portfolio purposes.
+
+---
+
+## Acknowledgments
+
+- Dataset provided by FoodHub (simulated data for analysis)
+- Analysis conducted as part of data science training and skill development
